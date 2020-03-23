@@ -1,0 +1,6 @@
+env
+gifs
+Dockerfile
+*.md
+__pycache__
+.vscode

@@ -15,14 +15,16 @@ optional arguments:
 
 ```
 
-![encrypt](gifs/enc.gif)
-
-![decrypt](gifs/dec.gif)
-
-
-
-
 ### Testing
+
+Clone the repository
+
+```bash
+git clone https://github.com/victorphoenix3/crypto_sample.git
+```
+
+#### Building
+1. Using virtual environment
 
 Start a python3 virtual environment and install the dependencies
 ```bash
@@ -30,6 +32,14 @@ virtualenv --python=$(which python3) env
 source env/bin/activate
 pip install -r requirements.txt
 ```
+
+2. Using docker
+
+```bash
+docker build -t=<name:tag> .
+docker run -it <name:tag> bash # to open a bash inside the container
+```
+
 
 #### Encrypt
 ```bash
@@ -42,3 +52,11 @@ Put the key and the initialization vector in the file `utils.py`
 python -m=decrypt -f=encrypted.ec
 ```
 
+#### Sample images
+
+Encrypting
+![encrypt](gifs/enc.gif)
+
+
+Decrypting
+![decrypt](gifs/dec.gif)
